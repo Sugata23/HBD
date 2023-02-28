@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('images/bithday-card.jpg');
+	background-size:  cover;
+	background-position: center;
+    background-repeat: no-repeat;
+    
+	font-family: Arial, sans-serif;
+	background-color: #f2f2f2;
+}
+
+
+
+ section {
+	margin: 50px auto;
+	max-width: 600px;
+    margin-right: 50%;
+	padding: 20px;
+    height: 520px;
+    width: 400px;
+	background-color: #fbfbfb;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    
+}
+img{
+    --g:#0000 ,#000 .5deg 90deg,#0000 91deg;
+  --m:
+    conic-gradient(from 45deg ,var(--g)) 20px 0  no-repeat,
+    conic-gradient(from 135deg,var(--g)) 0 20px  no-repeat,
+    conic-gradient(from 225deg,var(--g)) -20px 0 no-repeat,
+    conic-gradient(from 315deg,var(--g)) 0 -20px no-repeat;
+  -webkit-mask: var(--m);
+          mask: var(--m);
+  transition: .3s linear;
+  filter: grayscale(.5);
+  cursor: pointer;
+}
+img:hover {
+    -webkit-mask-position: 0 0;
+            mask-position: 0 0;
+    filter: grayscale(0);
+  }
+.heading{
+    font-size: 40px;
+    font-family: 'Great Vibes', cursive;
+    animation: slidein 2s;
+    
+}
+.wish{
+    padding-top: 10px;
+    font-family: 'Tilt Prism', cursive;
+    animation: slideout 3s;
+    
+}
+@keyframes slideout {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(10);
+    }
+  }
+
+.greet{
+    font-family: 'Gloock', serif;
+    font-size: 20px;
+    justify-content: flex-end;
+    animation: slidein 2s;
+    
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+
+section img {
+    width: 83%;
+    max-width: 600px;
+    height: auto;
+    margin: 27px 53px;
+    margin-left: 40px;
+}
+footer {
+	text-align: center;
+	padding: 20px;
+}
+
+  
+
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    section {
+        height: auto;
+    }
+}
+
+/* Media query for screens smaller than 480px */
+@media (max-width: 480px) {
+    section h2 {
+        font-size: 1.5em;
+    }
+
+    section p {
+        font-size: 1em;
+    }
+
+    section img {
+        margin: 10px 0;
+    }
+}
+
